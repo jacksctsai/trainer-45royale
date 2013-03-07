@@ -1,0 +1,60 @@
+@import compass
+@import compass/reset
+
+$default-font: Arial, Helvetica, sans-serif
+
+#header
+  +clearfix
+
+#wrap-header
+  +clearfix
+  background: url( "/img/bg-wrap.jpeg" ) no-repeat
+  margin: 0 auto
+  width: 960px
+
+#link-title
+  +hide-text
+  background: url( "/img/sprite/logo.png" ) no-repeat
+  background-position: top 60px left
+  display: block
+  float: left
+  height: 50px
+  padding: 60px 0 0
+  width: 209px
+
+#menu
+  +clearfix
+  float: right
+  padding: 100px 0 0
+
+.menu-item
+  padding: 0 10px
+
+.link-menu-item
+  font-family: $default-font
+  font-size: 14px
+  color: white
+  text-decoration: none
+
+.link-menu-item:hover
+  color: yellow
+
+#shop .link-menu-item
+  color: yellow
+
+#rocket
+  background: url( "/img/bg-header.png" )
+  height: 120px
+  width: 85px
+  
+#banner
+  +hide-text
+  clear: both
+  background: url( "/img/sprite/bg-banner-home.png" ) no-repeat
+  background-position: top 40px center
+  height: 107px
+  padding: 30px 0 60px
+  width: 960px
+  
+#ad
+  background: url( "/img/sprite/img-quote-bart.jpeg" )
