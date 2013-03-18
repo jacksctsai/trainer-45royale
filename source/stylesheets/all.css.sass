@@ -10,17 +10,18 @@ $default-font: Arial, Helvetica, sans-serif
 #wrap-header
   +clearfix
   background: url( "/img/bg-wrap.jpeg" ) no-repeat
-  position: relative
   width: 960px
   margin: 0 auto
+  position: relative
 
 #title
-  +clearfix
   +float-left
+  +clearfix
 
 #link-title
   +hide-text
   +float-left
+  +clearfix
   background: url( "/img/sprite/logo.png" ) no-repeat
   background-position: top 60px left
   display: block
@@ -29,8 +30,8 @@ $default-font: Arial, Helvetica, sans-serif
   padding: 60px 0 0
 
 #menu
-  +clearfix
   +float-right
+  +clearfix
   padding: 100px 0 0
 
 .menu-item
@@ -41,9 +42,8 @@ $default-font: Arial, Helvetica, sans-serif
   font-size: 14px
   color: white
   text-decoration: none
-
-.link-menu-item:hover
-  color: yellow
+  &:hover, &:active
+    color: yellow
 
 #shop
   +clearfix
@@ -69,7 +69,7 @@ $default-font: Arial, Helvetica, sans-serif
   position: absolute
   top: 180px
   left: 390px
-  z-index: 0
+  z-index: 1
 
 #banner
   +hide-text
@@ -79,7 +79,7 @@ $default-font: Arial, Helvetica, sans-serif
   width: 960px
   height: 107px
   padding: 30px 0 60px
-  z-index: 1
+  z-index: 2
 
 #wrap-body
   +clearfix
@@ -88,18 +88,17 @@ $default-font: Arial, Helvetica, sans-serif
 
 .block
   +float-left
+  +clearfix
   width: 300px
   padding: 15px 30px 15px 0
 
 .block-category
-  +clearfix
   font-family: $default-font
   font-size: 12px
   color: #93a6b0
-  padding: 240px 0 0
+  padding: 20px 0 0
 
 .block-title
-  +clearfix
   font-family: $default-font
   font-size: 24px
   font-weight: bold
@@ -108,6 +107,8 @@ $default-font: Arial, Helvetica, sans-serif
 .block-title-link
   color: red
   text-decoration: none
+  &:hover, &:active
+    text-decoration: underline
 
 .block-taster
   font-family: $default-font
@@ -116,14 +117,23 @@ $default-font: Arial, Helvetica, sans-serif
   & strong
     font-weight: bold
 
-#category-recent-work
+#recent-work-preview-link
+  +hide-text
   background: url( "/img/recent-criterion-1.jpeg" ) no-repeat
+  display: block
+  width: 300px
+  height: 200px
 
-#category-from-blog
+#from-blog-preview-link
+  +hide-text
   background: url( "/img/recent-criterion-2.jpeg" ) no-repeat
+  display: block
+  width: 300px
+  height: 200px
 
 #ad
   +float-left
+  +clearfix
   background: url( "/img/img-quote-bart.jpeg" ) no-repeat
   width: 300px
   height: 385px
@@ -181,16 +191,16 @@ $default-font: Arial, Helvetica, sans-serif
 
 .footer-item
   +float-left
-  border-right: 1px dotted rgba( 31, 97, 154, 0.3 )
+  +clearfix
   font-family: $default-font
   font-size: 12px
   line-height: 18px
   width: 210px
   height: 75px
   padding: 0 10px 0 25px
-
-.footer-item strong
-  font-weight: bold
+  border-right: 1px dotted rgba( 31, 97, 154, 0.3 )
+  & strong
+    font-weight: bold
 
 .footer-item-title
   font-family: $default-font
@@ -199,18 +209,38 @@ $default-font: Arial, Helvetica, sans-serif
   color: #1f619a
   line-height: 24px
 
+.link-footer-item-title
+  color: #1f619a
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: underline
+
 .footer-link
-  border-bottom: 1px dotted #1f619a
   font-weight: bold
   color: black
   text-decoration: none
+  border-bottom: 1px dotted #1f619a
+  &:hover, &:active
+    border-bottom: 1px solid #1f619a
+
+#footer-logo
+  width: 53px
+  height: 71px
+  padding: 0 0 0 15px
+  border-right: 0
+
+#link-footer-logo
+  +hide-text
+  background: url( "/img/bg-footer-whoisthis.jpeg" ) no-repeat
+  display: block
+  width: 53px
+  height: 71px
 
 #info
-  background: url( "/img/bg-footer-whoisthis.jpeg" ) no-repeat
   width: 140px
-  padding: 0 0 0 73px
+  padding: 0 0 0 15px
 
 #copyright
-  border-right: 0px
   width: 220px
   padding: 0 0 0 20px
+  border-right: 0px
