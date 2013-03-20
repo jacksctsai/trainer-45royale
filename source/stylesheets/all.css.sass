@@ -3,79 +3,101 @@
 
 $default-font: Arial, Helvetica, sans-serif
 
-#header
+#header-wrap
   +clearfix
   background: image-url( "bg-body.jpeg" ) repeat-x
 
-#header-wrap
+#header
   +clearfix
   background: image-url( "bg-wrap.jpeg" ) no-repeat
   width: 960px
   margin: 0 auto
   position: relative
 
+#header-inner
+  +clearfix
+  background: image-url( "bg-header.png" ) no-repeat
+  background-position: 390px 175px
+
 #title
   +float-left
   +clearfix
+  padding: 60px 0 0
 
 #link-title
   +hide-text
-  +float-left
-  +clearfix
   background: image-url( "sprite/logo.png" ) no-repeat
-  background-position: 0 60px
   display: block
   width: 209px
   height: 50px
-  padding: 60px 0 0
 
 #menu
   +float-right
   +clearfix
-  padding: 80px 0 0
+  background: image-url( "nav-icon-new-day.png" ) no-repeat
+  background-position: 330px 68px
 
 .menu-item
   +float-left
   +clearfix
   display: block
-  padding: 20px 30px 0 0
 
 .link-menu-item
-  +clearfix
-  font-family: $default-font
-  font-size: 14px
-  color: #fff
-  text-decoration: none
+  +hide-text
+  display: block
   position: relative
   &:hover, &:active
-    color: yellow
+    color: #ff0
 
-#shop
-  +clearfix
-  position: relative
+#link-home
+  background: image-url( "sprite/bg-nav-home.png" ) no-repeat
+  background-position: 0px 0px
+  width: 69px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -222px
 
-.hint-new
-  +hide-text
-  +clearfix
-  background: image-url( "nav-icon-new-day.png" ) no-repeat
-  display: block
-  width: 25px
-  height: 16px
-  position: absolute
-  top: 0
-  right: 0
+#link-about
+  background: image-url( "sprite/bg-nav-about.png" ) no-repeat
+  background-position: 0px 0px
+  width: 77px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -222px
+
+#link-work
+  background: image-url( "sprite/bg-nav-work.png" ) no-repeat
+  width: 71px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -222px
+
+#link-blog
+  background: image-url( "sprite/bg-nav-blog.png" ) no-repeat
+  background-position: 0px 0px
+  width: 63px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -222px
 
 #link-shop
-  color: yellow
+  background: image-url( "sprite/bg-nav-shop.png" ) no-repeat
+  background-position: 0px -111px
+  width: 63px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -333px
 
-#rocket
-  background: image-url( "bg-header.png" )
-  width: 85px
-  height: 120px
-  position: absolute
-  top: 180px
-  left: 390px
-  z-index: 1
+#link-contact
+  background: image-url( "sprite/bg-nav-contact.png" ) no-repeat
+  background-position: 0px 0px
+  width: 96px
+  height: 111px
+  &:hover, &:active
+    background-position: 0px -222px
+
+#link-shop
+  color: #ff0
 
 #banner
   +hide-text
@@ -84,13 +106,15 @@ $default-font: Arial, Helvetica, sans-serif
   background-position: 50% 40px
   width: 960px
   height: 107px
-  padding: 30px 0 60px
-  z-index: 2
+  padding: 30px 0 46px
 
-#body-wrap
+#main-wrap
   +clearfix
   width: 960px
   margin: 0 auto
+
+#main
+  padding: 14px 0 0
 
 .block
   +float-left
@@ -120,8 +144,9 @@ $default-font: Arial, Helvetica, sans-serif
   font-family: $default-font
   font-size: 12px
   line-height: 20px
-  & strong
-    font-weight: bold
+
+.taster-strong
+  font-weight: bold
 
 #recent-work-preview-link
   +hide-text
@@ -185,11 +210,11 @@ $default-font: Arial, Helvetica, sans-serif
   top: 220px
   right: 15px
 
-#footer
+#footer-wrap
   +clearfix
   background-color: rgba( 214, 219, 219, 0.7 )
 
-#footer-wrap
+#footer
   +clearfix
   width: 960px
   padding: 30px 0
@@ -205,8 +230,9 @@ $default-font: Arial, Helvetica, sans-serif
   height: 75px
   padding: 0 10px 0 25px
   border-right: 1px dotted rgba( 31, 97, 154, 0.3 )
-  & strong
-    font-weight: bold
+
+.footer-strong
+  font-weight: bold
 
 .footer-item-title
   font-family: $default-font
