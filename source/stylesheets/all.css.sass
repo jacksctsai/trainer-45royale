@@ -3,6 +3,9 @@
 
 $default-font: Arial, Helvetica, sans-serif
 
+body
+  background-color: rgba( 214, 219, 219, 0.7 )
+
 #header-wrap
   +clearfix
   background: image-url( "bg-body.jpeg" ) repeat-x
@@ -110,11 +113,13 @@ $default-font: Arial, Helvetica, sans-serif
 
 #main-wrap
   +clearfix
-  width: 960px
-  margin: 0 auto
+  background-color: white
 
 #main
+  +clearfix
+  width: 960px
   padding: 14px 0 0
+  margin: 0 auto
 
 .block
   +float-left
@@ -212,7 +217,7 @@ $default-font: Arial, Helvetica, sans-serif
 
 #footer-wrap
   +clearfix
-  background-color: rgba( 214, 219, 219, 0.7 )
+  //background-color: rgba = ( 214, 219, 219, 0.7 )
 
 #footer
   +clearfix
